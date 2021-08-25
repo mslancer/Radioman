@@ -34,7 +34,6 @@ public class RadioTest {
 
     @Test
     public void shouldMaxRadioStationOverLimit() {
-
         radio.setCurrentRadioStation(radio.getMaxRadioStation() + 1);
         assertEquals(radio.getCurrentRadioStation(), radio.getCurrentRadioStation());
 
@@ -42,7 +41,6 @@ public class RadioTest {
 
     @Test
     public void shouldMaxRadioStationUnderLimit() {
-
         radio.setCurrentRadioStation(radio.getMinRadioStation() - 1);
         assertEquals(radio.getCurrentRadioStation(), radio.getCurrentRadioStation());
 
@@ -58,7 +56,6 @@ public class RadioTest {
 
     @Test
     public void shouldMaxRadioStationNextZeroStation() {
-
         radio.setCurrentRadioStation(radio.getMaxRadioStation());
         radio.increaseRadio();
         assertEquals(radio.getCurrentRadioStation(), radio.getCurrentRadioStation());
@@ -67,7 +64,6 @@ public class RadioTest {
 
     @Test
     public void shouldMinRadioStationGetNineStation() {
-
         radio.setCurrentRadioStation(radio.getMinRadioStation());
         radio.decreaseRadio();
         assertEquals(radio.getCurrentRadioStation(), radio.getCurrentRadioStation());
@@ -76,7 +72,6 @@ public class RadioTest {
 
     @Test
     public void shouldIncreases2xFromMaxStation() {
-
         radio.setCurrentRadioStation(radio.getMaxRadioStation());
         radio.increaseRadio();
         radio.increaseRadio();
@@ -86,7 +81,6 @@ public class RadioTest {
 
     @Test
     public void shouldIncreasesAndDicreaseFromFiveStation() {
-
         radio.setCurrentRadioStation(5);
         radio.increaseRadio();
         radio.decreaseRadio();
@@ -98,7 +92,6 @@ public class RadioTest {
 
     @Test
     public void shouldMaxVolume() {
-
         radio.setCurrentVolume(radio.getMaxVolume());
         assertEquals(radio.getCurrentVolume(), radio.getCurrentVolume());
 
@@ -113,7 +106,6 @@ public class RadioTest {
 
     @Test
     public void shouldMaxVolumeOverLimit() {
-
         radio.setCurrentVolume(radio.getMaxVolume() + 1);
         assertEquals(radio.getCurrentVolume(), radio.getCurrentVolume());
 
@@ -128,7 +120,6 @@ public class RadioTest {
 
     @Test
     public void shouldMaxAndIncreaseVolume() {
-
         radio.setCurrentVolume(radio.getMaxVolume());
         radio.increaseVolume();
         assertEquals(radio.getCurrentVolume(), radio.getCurrentVolume());
@@ -137,7 +128,6 @@ public class RadioTest {
 
     @Test
     public void shouldMinAndDecreaseVolume() {
-
         radio.setCurrentVolume(radio.getMinVolume());
         radio.decreaseVolume();
         assertEquals(radio.getCurrentVolume(), radio.getCurrentVolume());
@@ -145,8 +135,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldIncreases2xandDecreaseFromMaxVolume() {
-
+    public void shouldIncreases2xAndDecreaseFromMaxVolume() {
         radio.setCurrentVolume(radio.getMaxVolume());
         radio.increaseVolume();
         radio.decreaseVolume();
@@ -156,8 +145,7 @@ public class RadioTest {
     }
 
     @Test
-    public void sshouldIncreasesAndDicreaseFromNineVolume() {
-
+    public void shouldIncreasesAndDecreaseFromNineVolume() {
         radio.setCurrentVolume(9);
         radio.increaseVolume();
         radio.decreaseVolume();
@@ -166,8 +154,7 @@ public class RadioTest {
     }
 
     @Test
-    public void sshouldDicrease2xFromOneVolume() {
-
+    public void shouldDecrease2xFromOneVolume() {
         radio.setCurrentVolume(1);
         radio.decreaseVolume();
         radio.decreaseVolume();
