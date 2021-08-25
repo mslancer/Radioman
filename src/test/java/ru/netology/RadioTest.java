@@ -80,7 +80,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldIncreasesAndDicreaseFromFiveStation() {
+    public void shouldIncreasesAndDecreaseFromFiveStation() {
         radio.setCurrentRadioStation(5);
         radio.increaseRadio();
         radio.decreaseRadio();
