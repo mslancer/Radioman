@@ -1,14 +1,15 @@
 package ru.netology;
 
 public class Radio {
+
     // Радио
-    private int currentRadioStation ;
-    private int minRadioStation = 0 ;
-    private int maxRadioStation = 9 ;
+    private int currentRadioStation;
+    private int minRadioStation = 0;
+    private int maxRadioStation = 9;
     // Звук
-    private int currentVolume ;
-    private int minVolume = 0 ;
-    private int maxVolume = 10 ;
+    private int currentVolume;
+    private int minVolume = 0;
+    private int maxVolume = 10;
 
     //Работа с радио
 
@@ -35,45 +36,45 @@ public class Radio {
     }
 
 
-        // Работа с громкостью
+    // Работа с громкостью
 
-        public int getCurrentVolume () {
-            return currentVolume;
+    public int getCurrentVolume() {
+        return currentVolume;
+    }
+
+    public void setCurrentVolume(int currentVolume) {
+        if (currentVolume > maxVolume) {
+            return;
         }
-
-        public void setCurrentVolume ( int currentVolume){
-            if (currentVolume > maxVolume) {
-                return;
-            }
-            if (currentVolume < minVolume) {
-                return;
-            }
-            this.currentVolume = currentVolume;
+        if (currentVolume < minVolume) {
+            return;
         }
+        this.currentVolume = currentVolume;
+    }
 
-        public int getMinVolume () {
-            return minVolume;
-        }
+    public int getMinVolume() {
+        return minVolume;
+    }
 
-        public int getMaxVolume () {
-            return maxVolume;
-        }
+    public int getMaxVolume() {
+        return maxVolume;
+    }
 
 
-        // Переключение Радио
+    // Переключение Радио
 
     public void increaseRadio() {
         if (currentRadioStation < 9) {
             currentRadioStation = currentRadioStation + 1;
-          } else  {
+        } else {
             currentRadioStation = minRadioStation;
-            }
         }
+    }
 
     public void decreaseRadio() {
         if (currentRadioStation > 0) {
             currentRadioStation = currentRadioStation - 1;
-        } else  {
+        } else {
             currentRadioStation = maxRadioStation;
         }
     }
@@ -85,6 +86,7 @@ public class Radio {
             currentVolume = currentVolume + 1;
         }
     }
+
     public void decreaseVolume() {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
