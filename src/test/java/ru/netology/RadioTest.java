@@ -17,21 +17,6 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldMaxRadioStationOverLimit() {
-        radio.setCurrentRadioStation(radio.getMaxRadioStation() + 1);
-        assertEquals(0, radio.getCurrentRadioStation());
-
-    }
-
-    @Test
-    public void shouldMaxRadioStationUnderLimit() {
-        radio.setCurrentRadioStation(radio.getMinRadioStation() - 1);
-        assertEquals(0, radio.getCurrentRadioStation());
-
-    }
-
-
-    @Test
     public void shouldMinRadioStation() {
         radio.setCurrentRadioStation(radio.getMinRadioStation());
         assertEquals(0, radio.getCurrentRadioStation());
@@ -84,20 +69,6 @@ public class RadioTest {
     @Test
     public void shouldMinVolume() {
         radio.setCurrentVolume(radio.getMinVolume());
-        assertEquals(0, radio.getCurrentVolume());
-
-    }
-
-    @Test
-    public void shouldMaxVolumeOverLimit() {
-        radio.setCurrentVolume(radio.getMaxVolume() + 1);
-        assertEquals(0, radio.getCurrentVolume());
-
-    }
-
-    @Test
-    public void shouldMinVolumeUnderLimit() {
-        radio.setCurrentVolume(radio.getMinVolume() - 1);
         assertEquals(0, radio.getCurrentVolume());
 
     }
