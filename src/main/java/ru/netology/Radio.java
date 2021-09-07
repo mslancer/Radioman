@@ -5,7 +5,8 @@ public class Radio {
     // Радио
     private int currentRadioStation;
     private int minRadioStation = 0;
-    private int maxRadioStation = 10;
+    private int maxNumberStation = 10;
+    private int maxRadioStation = 9;
 
     // Звук
     private int currentVolume;
@@ -16,8 +17,9 @@ public class Radio {
     public Radio() {
     }
 
-    public Radio(int maxRadioStation) {
-        this.maxRadioStation = maxRadioStation;
+    public Radio(int maxNumberStation) {
+        this.maxNumberStation = maxNumberStation ;
+        this.maxRadioStation = maxNumberStation - 1;
     }
 
     //Работа с радио
