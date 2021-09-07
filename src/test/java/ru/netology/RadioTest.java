@@ -77,7 +77,7 @@ public class RadioTest {
     public void shouldMaxAndIncreaseVolume() {
         radio.setCurrentVolume(radio.getMaxVolume());
         radio.increaseVolume();
-        assertEquals(9, radio.getCurrentVolume());
+        assertEquals(10, radio.getCurrentVolume());
 
     }
 
